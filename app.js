@@ -158,3 +158,4 @@ app.post("/listing/:id/reviews", async (req, res) => {
     console.log("listing is save");
     res.send("Review is added");
 })
+console.log("closing");
