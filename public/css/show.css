@@ -1,0 +1,24 @@
+.all-details{
+    list-style: none;
+}
+.delete{
+    background-color: rgb(51, 47, 47) !important;
+    width: fit-content !important;
+    color: white !important;
+}
+.delete:hover{
+    background-color: rgb(36, 32, 32) !important;
+    
+    color: white !important;
+}
+.card-link-edit{
+    text-decoration: none;
+    padding: 0.4rem  ;
+    margin-right: 2rem !important;
+   
+}
+
+.card-link-edit:hover{
+    text-decoration: underline;
+  
+}

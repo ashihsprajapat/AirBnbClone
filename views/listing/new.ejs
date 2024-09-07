@@ -1,0 +1,70 @@
+<% layout("/layouts/boilerplate.ejs") %>
+<body>
+    <h3>Fill Details</h3>
+
+    <form method="post" action="/listings"
+        class="row g-3 needs-validation form-edit" novalidate>
+        <div class="col-md-12">
+            <input type="text" name="listing[title]" placeholder="Enter title"
+                required class="form-control">
+            <div class="valid-feedback">
+                Titel looks good!
+            </div>
+            <div class="invalid-feedback">
+                Enter a good title
+            </div>
+        </div>
+        <div class="col-md-12">
+            <textarea name="listing[description]" id
+                placeholder="Enter description" rows="5" cols="30" required
+                class="form-control"></textarea>
+            <div class="invalid-feedback">
+                Please written short description
+            </div>
+        </div>
+        <div class="col-md-12">
+            <input type="text" name="listing[image]"
+                placeholder="Enter image Url" class="form-control">
+
+        </div>
+
+        <div class="col-md-6">
+            <input type="text" placeholder="Enter price" name="listing[price]"
+                required class="form-control">
+            <div class="invalid-feedback">
+                Enter valid price
+            </div>
+        </div>
+        <div class="col-md-6">
+            <input type="text" name="listing[country]" placeholder="Country"
+                required class="form-control">
+            <div class="invalid-feedback">
+                Enter valid country name
+            </div>
+        </div>
+        <div class="col-md-12">
+            <input type="text" name="listing[location]"
+                placeholder="Enter Location" required class="form-control">
+            <div class="invalid-feedback">
+                Please enter right location
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value
+                    id="invalidCheck" required>
+
+                <label class="form-check-label" for="invalidCheck">
+                    Agree to terms and conditions
+                </label>
+                <div class="inv alid-feedback">
+                    You must agree before submitting.
+                </div>
+            </div>
+        </div>
+
+        <button class="delete btn">Add List</button>
+
+    </form>
+
+</body><% layout("/layouts/boilerplate.ejs") %>

@@ -1,0 +1,79 @@
+<% layout("/layouts/boilerplate.ejs") %>
+<body>
+    <h2><%= listing.title %></h2>
+
+    <form method="POST" action="/listings/<%= listing._id %>?_method=PUT"
+        novalidate class="form-edit needs-validation row g-3 ">
+
+        <div class="col-md-12">
+            <input type="text" name="listing[title]"
+                value="<%= listing.title %>"
+                required class="form-control">
+            <div class="valid-feedback">
+                Titel looks good!
+            </div>
+            <div class="invalid-feedback">
+                Enter a good title
+            </div>
+        </div>
+        <div class="col-md-12">
+            <textarea name="listing[description]" id
+                rows="5" cols="30" required
+                class="form-control"> <%= listing.description %></textarea>
+            <div class="invalid-feedback">
+                Please written short description
+            </div>
+        </div>
+        <div class="col-md-12">
+            <input type="text" name="listing[image]"
+                value="<%= listing.image %>"
+                class="form-control" required class="form-control">
+            <div class="invalid-feedback">
+                Enter image url
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <input type="number" name="listing[price]"
+                value="<%= listing.price %>"
+                required class="form-control">
+            <div class="invalid-feedback">
+                Enter valid price
+            </div>
+        </div>
+        <div class="col-md-6">
+            <input type="text" name="listing[country]"
+                value="<%= listing.country %>"
+                required class="form-control">
+            <div class="invalid-feedback">
+                Enter valid country name
+            </div>
+        </div>
+        <div class="col-md-12">
+            <input type="text" name="listing[location]"
+                value="<%= listing.location %>"
+                required class="form-control">
+            <div class="invalid-feedback">
+                Please enter right location
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value
+                    id="invalidCheck" required>
+
+                <label class="form-check-label" for="invalidCheck">
+                    Agree to terms and conditions
+                </label>
+                <div class="invalid-feedback">
+                    You must agree before submitting.
+                </div>
+            </div>
+        </div>
+
+        <button class=" btn delete">Add List</button>
+        <br><br>
+        <a href="/listings/<%= listing._id %>" class="card-link-edit">Cancel</a>
+    </form>
+
+</body>

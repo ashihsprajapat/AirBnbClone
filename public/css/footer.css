@@ -1,0 +1,35 @@
+.f-info-link a{
+    text-decoration: none;
+}
+.f-info-link a:hover{
+    text-decoration: underline;
+}
+.f-info{
+   margin-top: 4rem;
+    height: 10rem;
+    background-color: aliceblue;
+    justify-content: center;
+    text-wrap: wrap;
+    align-items: space-evenly;
+    text-align: center;
+}
+.f-info-socils,.f-info-brands{
+    font-size: 1.3rem;
+    width: 100%;
+    
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.f-info-socils i{
+    margin-right: 0.8rem;
+}
+.f-info-link{
+    width: 100%;
+    margin-top: 1.5rem;
+    vertical-align: middle;
+   
+    justify-content: center;
+    align-items: center;
+}

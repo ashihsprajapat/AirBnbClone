@@ -1,0 +1,13 @@
+.navbar{
+    
+   height: 5rem;
+   background-color: white;
+   width: 100%;
+}
+.fa-compass{
+    color: red;
+    font-size: 2rem;
+}
+.nav-link{
+    color: black !important;
+}

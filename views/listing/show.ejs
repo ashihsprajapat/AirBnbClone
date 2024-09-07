@@ -1,0 +1,52 @@
+
+<% layout("/layouts/boilerplate.ejs") %>
+<body>
+  <h2><%= list.title %></h2>
+  <div class="row row-cols-sm-1 form-edit">
+
+    <div class="card col " style="width: 35%; height: 50%; ">
+      <img src="<%= list.image%>" class="card-img-top show-img" alt="..."
+        style="width: 25rem;  height: 50%;">
+      <div class="card-body">
+        <h5 class="card-title"><%= list.title %></h5>
+        <a href="/listings" class="card-link-edit">Book Now</a>
+      </div>
+    </div>
+
+    <div class="card col " style="width: 50%;">
+      <div class="card-body">
+        <h5 class="card-title"><%= list.title %></h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary">&#x20b9;<%=
+          list.price.toLocaleString("en-IN") %></h6>
+        <p class="card-text"><%= list.description %>. <br> <%= list.location %>
+          <br> <%= list.country %></p>
+        <a href="/listings/<%= list._id %>/edit"
+          class="card-link card-link-edit">Edit</a>
+        <a href="/listings" class="card-link card-link-edit">Back</a>
+        <form method="post" action="/listings/<%=list._id  %>?_method=delete">
+          <br>
+          <button class=" btn delete"> delete</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+  <hr>
+  <div>
+    <form action="/listing/<%=list._id  %>/reviews" method="POST" novalidate class="form-edit needs-validation row g-3 ">
+      <div class="col-md-12 " >
+        <label for="rating">Rating</label>
+        <input type="range" min="1" max="5" class="form-range" name="review[rating]">
+      </div>
+      <div>
+        <label for="comment">Comment</label>
+        <textarea name="review[comment]" id="comment"  class="form-control"></textarea>
+      </div>
+      <div>
+        <label for="createAt">CreateAt</label>
+        <input type="date" name="review[createAt]" id="createAt">
+      </div>
+      <button class="btn delete" type="submit">Submit</button>
+    </form>
+  </div>  
+</body>

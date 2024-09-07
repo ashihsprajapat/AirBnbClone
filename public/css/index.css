@@ -1,0 +1,21 @@
+body{
+   font-family: "Plus Jakarta Sans", sans-serif  !important;
+  font-optical-sizing: auto  !important;
+  font-weight: weight !important;
+  font-style: normal !important; 
+}
+.card{
+  margin-bottom: 3rem;
+    margin-left: 0.6rem;
+    border: none !important;
+}
+.card-body{
+    padding: 0 !important;
+}
+.card-img-top{
+    width: 100% !important;
+    border-radius: 2rem !important;
+}
+.card p{
+    font-weight: 4000 !important;
+}
