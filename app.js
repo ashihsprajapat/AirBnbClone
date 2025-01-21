@@ -34,9 +34,9 @@ main()
         console.log(err);
     })
 //home rout
-app.get("/", (req, res) => {
-    res.send("ok ");
-})
+    app.get("/", (req, res) => {
+        res.send("ok ");
+    })
 
 //add new  rout
 app.post("/listings", wrapAsync(async (req, res) => {
